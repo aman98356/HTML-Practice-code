@@ -1,0 +1,75 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student form</title>
+    <style>
+        #form{
+margin: 15% 20% 15% 20%;
+border: 2px solid red;
+background-color: lightpink ;
+width: 60%;
+height: 80%;
+padding: 40px;
+        }
+h1{
+    text-align: center;
+}
+*{
+    background-color: lightskyblue;
+}
+  </style>
+    <script>
+function func(){
+    document.getElementById('fname1').innerHTML = document.getElementById('fname').value
+    document.getElementById('lname1').innerHTML = document.getElementById('lname').value
+    document.getElementById('rollno1').innerHTML = document.getElementById('rollno').value
+    document.getElementById('dob1').innerHTML = document.getElementById('dob').value
+    document.getElementById('qual1').innerHTML = document.getElementById('qual').value
+    document.getElementById('email1').innerHTML = document.getElementById('email').value
+    document.getElementById('course1').innerHTML = document.getElementById('course').value
+    document.getElementById('phone1').innerHTML = document.getElementById('phone').value
+if(document.getElementById('male').checked)
+{
+document.getElementById("disp").innerHTML= document.getElementById("male").value;
+}
+else if(document.getElementById('female').checked)
+{
+document.getElementById("disp").innerHTML = document.getElementById("female").value;
+}
+else{
+    document.getElementById("disp").innerHTML = document.getElementById("other").value;
+}
+}
+    </script>
+</head>
+<body>
+    <h1>Student Form</h1>
+    <form id="form">
+  student first name  <input type="text" id="fname" required><br>
+  student last name <input type="text" id="lname" required ><br>
+  student roll no. <input type="text" id="rollno" required><br>
+  student DOB <input type="date" id="dob" required><br>
+  student qualification <input type="text" id="qual"><br>
+  <input type="radio" id="male" name="gender" value="male" checked>male<br>
+  <input type="radio" id="female" name="gender" value="female">Female<br>
+  <input type="radio" id="other" name="gender" value="other">other<br>
+  student email <input type="email" id="email" required><br>
+  student course <input type="text" id="course" required><br>
+  student phone number <input type="text" id="phone" required>
+  <input type="submit" id="submit" onclick="func()">
+  <p id="fname1">fname</p>
+  <p id="lname1">lname</p>
+  <p id="rollno1">rollno</p>
+  <p id="disp"> gender</p>
+  <p id="dob1">dob</p>
+  <p id="qual1">qualification</p>
+  <p id="email1">email</p>
+  <p id="course1">course</p>
+  <p id="phone1">phone</p>
+  </form>
+</body>
+</html>
+
